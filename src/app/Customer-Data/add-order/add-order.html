@@ -1,0 +1,58 @@
+<div mat-dialog-title>
+      <h3>เพิ่มคำสั่งซื้อ</h3>
+    </div>
+    <div mat-dialog-content class="dialog-fixed-size">
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>วันที่รับสินค้า</mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="กรุณาเลือกวันที่" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>เงินจองมัดจำ</mat-label>
+          <input matInput type="number" placeholder="กรุณากรอกเงินจองมัดจำ" />
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>วิธีการจัดส่ง</mat-label>
+          <mat-select [(ngModel)]="selectedDelivery">
+            <mat-option value="receive">รับเอง</mat-option>
+            <mat-option value="delivery">จัดส่ง</mat-option>
+            <mat-option value="meetup">นัดรับ</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>หมูที่ใช้</mat-label>
+          <mat-select [(ngModel)]="selectedPork">
+            <mat-option value="pork1">นำมาเอง</mat-option>
+            <mat-option value="pork2">จัดหาให้</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="radio">
+      <label class="radio-label">ขนาดหมูย่าง</label>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">ไซส์เล็ก</mat-radio-button>
+        <mat-radio-button value="2">ไซส์กลาง</mat-radio-button>
+        <mat-radio-button value="3">ไซส์ใหญ่</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="row-pig">
+       <mat-form-field appearance="fill">
+          <mat-label>จำนวนหมู</mat-label>
+          <input matInput type="number" placeholder="กรุณากรอกจำนวนหมู" />
+        </mat-form-field>
+    </div>
+
+
+    <div mat-dialog-actions>
+        <button mat-raised-button>ยกเลิก</button>
+        <button mat-raised-button>บันทึก</button>
+    </div>

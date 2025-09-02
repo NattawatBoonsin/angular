@@ -1,0 +1,38 @@
+<div mat-dialog-title>
+  <h3>เพิ่มข้อมูลลูกค้า</h3>
+</div>
+
+<div mat-dialog-content class="dialog-fixed-size">
+  <div class="row">
+    <mat-form-field appearance="fill">
+      <mat-label>ชื่อ</mat-label>
+      <input matInput type="text" placeholder="กรุณากรอกชื่อ" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>นามสกุล</mat-label>
+      <input matInput type="text" placeholder="กรุณากรอกนามสกุล" />
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="fill">
+      <mat-label>เบอร์โทรศัพท์</mat-label>
+      <input matInput type="text" placeholder="กรุณากรอกเบอร์โทรศัพท์" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>ที่จัดส่ง</mat-label>
+      <input matInput type="text" placeholder="กรุณากรอกที่จัดส่ง" />
+    </mat-form-field>
+  </div>
+
+  <div class="center-margin">
+    <button mat-raised-button (click)="openAddOrderForm()">
+      เพิ่มข้อมูลคำสั่งซื้อ
+    </button>
+  </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button>ยกเลิก</button>
+  <button mat-raised-button>บันทึก</button>
+</div>

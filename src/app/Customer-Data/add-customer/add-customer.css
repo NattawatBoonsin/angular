@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.center-margin {
+  display: flex;
+  justify-content: center; /* จัดกึ่งกลางแนวนอน */
+  margin: 10px 0;
+}
+
+.dialog-fixed-size {
+  width: 500px;      /* ความกว้างคงที่ */
+  min-height: 250px; /* ความสูงขั้นต่ำ */
+}
+mat-form-field {
+  width: 100%;
+}
